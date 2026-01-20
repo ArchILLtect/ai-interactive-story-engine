@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface RunPageProps {
   params: Promise<{
     runId: string;
@@ -39,12 +41,12 @@ export default async function RunPage({ params }: RunPageProps) {
         </div>
         
         <div className="flex gap-4">
-          <a 
+          <Link 
             href="/" 
             className="px-4 py-2 border rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
           >
             ← Back to Home
-          </a>
+          </Link>
         </div>
       </div>
     </div>

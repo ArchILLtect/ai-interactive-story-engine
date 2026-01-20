@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-8">
@@ -10,7 +12,7 @@ export default function HomePage() {
         </div>
         
         <div className="grid md:grid-cols-3 gap-4">
-          <a 
+          <Link 
             href="/run/new" 
             className="p-6 border rounded-lg hover:shadow-lg transition-shadow"
           >
@@ -18,9 +20,9 @@ export default function HomePage() {
             <p className="text-gray-600 dark:text-gray-400">
               Begin a new interactive story adventure
             </p>
-          </a>
+          </Link>
           
-          <a 
+          <Link 
             href="/profile" 
             className="p-6 border rounded-lg hover:shadow-lg transition-shadow"
           >
@@ -28,9 +30,9 @@ export default function HomePage() {
             <p className="text-gray-600 dark:text-gray-400">
               View your stats and past runs
             </p>
-          </a>
+          </Link>
           
-          <a 
+          <Link 
             href="/leaderboard" 
             className="p-6 border rounded-lg hover:shadow-lg transition-shadow"
           >
@@ -38,7 +40,7 @@ export default function HomePage() {
             <p className="text-gray-600 dark:text-gray-400">
               See top players and achievements
             </p>
-          </a>
+          </Link>
         </div>
       </main>
     </div>

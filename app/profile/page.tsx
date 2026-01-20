@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ProfilePage() {
   return (
     <div className="min-h-screen p-8">
@@ -22,12 +24,12 @@ export default function ProfilePage() {
         </div>
         
         <div className="flex gap-4">
-          <a 
+          <Link 
             href="/" 
             className="px-4 py-2 border rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
           >
             ← Back to Home
-          </a>
+          </Link>
         </div>
       </div>
     </div>
