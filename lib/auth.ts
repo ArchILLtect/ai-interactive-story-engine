@@ -18,6 +18,8 @@ export const authConfig: NextAuthConfig = {
       const isLoggedIn = !!auth?.user;
       const isOnProtectedRoute = nextUrl.pathname.startsWith("/profile");
       
+      // Currently only /profile is protected
+      // Extend this logic as needed for other routes (e.g., /run/* for creating new runs)
       if (isOnProtectedRoute) {
         if (isLoggedIn) return true;
         return false; // Redirect unauthenticated users to login page

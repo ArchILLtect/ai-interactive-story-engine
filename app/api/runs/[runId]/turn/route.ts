@@ -38,13 +38,14 @@ export async function POST(
 
     // Create the turn
     const runState = run.state as Record<string, unknown>;
+    const currentTurn = (runState?.currentTurn as number) || 0;
     const turn = await prisma.turn.create({
       data: {
         runId,
         choice: choice || {},
         outcome: outcome || {},
         state: {
-          turnNumber: (runState?.currentTurn as number) || 1,
+          turnNumber: currentTurn + 1,
         },
       },
     });
@@ -56,7 +57,7 @@ export async function POST(
       data: {
         state: {
           ...currentState,
-          currentTurn: (((currentState.currentTurn as number) || 0) + 1),
+          currentTurn: currentTurn + 1,
           lastChoice: choice,
         },
       },

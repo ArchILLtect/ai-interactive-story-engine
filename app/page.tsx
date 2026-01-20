@@ -13,7 +13,7 @@ export default function HomePage() {
         
         <div className="grid md:grid-cols-3 gap-4">
           <Link 
-            href="/run/new" 
+            href="/run/demo" 
             className="p-6 border rounded-lg hover:shadow-lg transition-shadow"
           >
             <h2 className="text-2xl font-semibold mb-2">Start New Run</h2>
